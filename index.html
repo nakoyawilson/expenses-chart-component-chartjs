@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="visually-hidden">Expenses Chart</h1>
+      <section class="header">
+        <h2 class="caption">My balance</h2>
+        <h3 class="balance">$921.48</h3>
+      </section>
+      <section class="container">
+        <h2 class="heading">Spending - Last 7 days</h2>
+        <div class="chart-wrapper">
+          <canvas id="chart"></canvas>
+        </div>
+        <div class="wrapper">
+          <div>
+            <h2 class="caption">Total this month</h2>
+            <h3 class="total">$478.33</h3>
+          </div>
+          <div>
+            <span class="caption percentage">+2.4%</span>
+            <span class="caption">from last month</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

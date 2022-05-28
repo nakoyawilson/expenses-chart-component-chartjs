@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+:root {
+  --primary-font: "DM Sans", sans-serif;
+  --soft-red: hsl(10, 79%, 64%);
+  --cyan: hsl(186, 34%, 60%);
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --vary-pale-orange: hsl(30, 100%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* General Styles */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--cream);
+  font-family: var(--primary-font);
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+span {
+  display: block;
+}
+
+/* Main */
+.main {
+  width: min(91.46667%, 343px);
+  margin: 6.7rem auto 6.6rem;
+}
+
+.header {
+  background: var(--soft-red);
+  border-radius: 10px;
+  padding: 2rem 2rem 2.2rem;
+  color: var(--white);
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  width: 60px;
+  height: 40px;
+  background-image: url(../images/logo.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 2.4rem;
+  top: 2.8rem;
+}
+
+.caption {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.balance {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  margin-top: 0.4rem;
+}
+
+.container {
+  margin-top: 1.6rem;
+  border-radius: 10px;
+  background: var(--vary-pale-orange);
+  padding: 2.4rem 2rem;
+  color: var(--dark-brown);
+}
+
+.container .heading {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+}
+
+.container .caption {
+  color: var(--medium-brown);
+}
+
+.wrapper {
+  border-top: 2px solid var(--cream);
+  border-radius: 1px;
+  padding-top: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.chart-wrapper {
+  margin-top: 5.2rem;
+}
+
+.total {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.9rem;
+}
+
+.caption.percentage {
+  font-weight: 700;
+  text-align: right;
+  color: var(--dark-brown);
+}
+
+/* Footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
