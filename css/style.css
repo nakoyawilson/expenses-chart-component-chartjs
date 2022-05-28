@@ -7,8 +7,8 @@
   --dark-brown: hsl(25, 47%, 15%);
   --medium-brown: hsl(28, 10%, 53%);
   --cream: hsl(27, 66%, 92%);
-  --vary-pale-orange: hsl(30, 100%, 98%);
-  --white: hsl(0, 0%, 100%);
+  --very-pale-orange: hsl(30, 100%, 98%);
+  --attribution: hsl(228, 45%, 44%);
 }
 
 /* General Styles */
@@ -53,7 +53,7 @@ span {
   background: var(--soft-red);
   border-radius: 10px;
   padding: 2rem 2rem 2.2rem;
-  color: var(--white);
+  color: var(--very-pale-orange);
   position: relative;
 }
 
@@ -86,7 +86,7 @@ span {
 .container {
   margin-top: 1.6rem;
   border-radius: 10px;
-  background: var(--vary-pale-orange);
+  background: var(--very-pale-orange);
   padding: 2.4rem 2rem;
   color: var(--dark-brown);
 }
@@ -111,7 +111,10 @@ span {
 }
 
 .chart-wrapper {
-  margin-top: 5.2rem;
+  margin: 5.2rem 0 2.4rem;
+  height: 178px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .total {
@@ -134,5 +137,75 @@ span {
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--attribution);
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 476px) {
+  /* Main */
+  .main {
+    width: min(91.46667%, 540px);
+    margin: 18.2rem auto;
+  }
+
+  .header {
+    border-radius: 20px;
+    padding: 2.7rem 3.2rem 2.5rem;
+  }
+
+  .header::after {
+    width: 72px;
+    height: 48px;
+    right: 3.9rem;
+    top: 3.9rem;
+  }
+
+  .caption {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  }
+
+  .balance {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+    margin-top: 0.8rem;
+  }
+
+  .container {
+    margin-top: 2.4rem;
+    border-radius: 20px;
+    padding: 3.2rem 4rem 4rem;
+  }
+
+  .container .heading {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  }
+
+  .wrapper {
+    padding-top: 3.2rem;
+  }
+
+  .chart-wrapper {
+    margin: 6.6rem 0 3.2rem;
+  }
+
+  .total {
+    font-size: 4.8rem;
+    line-height: 6.2rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  .caption.percentage {
+    text-align: center;
+  }
 }

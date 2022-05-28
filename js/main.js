@@ -9,8 +9,14 @@ const fetchData = async () => {
       labels: data.map((item) => item.day),
       datasets: [
         {
-          backgroundColor: "hsl(10, 79%, 64%)",
-          // borderColor: "rgb(255, 99, 132)",
+          backgroundColor: data.map((_, idx) =>
+            idx === dateIndex ? "hsl(186, 35%, 60%)" : "hsl(10, 79%, 64%)"
+          ),
+          hoverBackgroundColor: data.map((_, idx) =>
+            idx === dateIndex ? "hsl(186, 49%, 80%)" : "hsl(10, 100%, 76%)"
+          ),
+          borderRadius: window.innerWidth < 476 ? 3 : 5,
+          borderSkipped: "",
           data: data.map((item) => item.amount),
         },
       ],
@@ -18,9 +24,42 @@ const fetchData = async () => {
     const config = {
       type: "bar",
       data: chartData,
+
       options: {
+        // maintainAspectRatio: false,
+        // aspectRatio: 1,
         plugins: {
           legend: {
+            display: false,
+          },
+          tooltip: {
+            backgroundColor: "hsl(25, 47%, 15%)",
+            bodyColor: "hsla(30, 100%, 98%)",
+            bodyFont: {
+              size: 18,
+              family: "'DM Sans', sans-serif",
+              weight: "bold",
+            },
+            cornerRadius: 5,
+            displayColors: false,
+            padding: 9,
+            callbacks: {
+              title: () => null,
+            },
+          },
+        },
+        scales: {
+          x: {
+            grid: {
+              drawBorder: false,
+              display: false,
+            },
+            ticks: {
+              color: "hsl(27, 10%, 52%)",
+              font: { size: 12, family: "'DM Sans', sans-serif" },
+            },
+          },
+          y: {
             display: false,
           },
         },
