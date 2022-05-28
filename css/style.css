@@ -26,6 +26,11 @@ html {
 body {
   background: var(--cream);
   font-family: var(--primary-font);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.4rem;
 }
 
 .visually-hidden {
@@ -46,7 +51,7 @@ span {
 /* Main */
 .main {
   width: min(91.46667%, 343px);
-  margin: 6.7rem auto 6.6rem;
+  margin: auto;
 }
 
 .header {
@@ -146,7 +151,6 @@ span {
   /* Main */
   .main {
     width: min(91.46667%, 540px);
-    margin: 18.2rem auto;
   }
 
   .header {
