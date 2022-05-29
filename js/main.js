@@ -24,15 +24,15 @@ const fetchData = async () => {
     const config = {
       type: "bar",
       data: chartData,
-
       options: {
-        // maintainAspectRatio: false,
-        // aspectRatio: 1,
         plugins: {
           legend: {
             display: false,
           },
           tooltip: {
+            position: "middle",
+            yAlign: null,
+            xAlign: "center",
             backgroundColor: "hsl(25, 47%, 15%)",
             bodyColor: "hsla(30, 100%, 98%)",
             bodyFont: {
@@ -42,9 +42,12 @@ const fetchData = async () => {
             },
             cornerRadius: 5,
             displayColors: false,
+            caretSize: 0,
             padding: 9,
+            bodyAlign: "left",
             callbacks: {
               title: () => null,
+              label: (tooltipItem, data) => "$" + tooltipItem.raw,
             },
           },
         },
@@ -66,6 +69,13 @@ const fetchData = async () => {
       },
     };
     new Chart(document.getElementById("chart"), config);
+    Chart.Tooltip.positioners.middle = (elements) => {
+      let model = elements[0].element;
+      return {
+        x: model.x,
+        y: model.y - 30,
+      };
+    };
   } catch (err) {
     console.log(err);
   }
