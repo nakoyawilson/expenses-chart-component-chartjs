@@ -10,6 +10,7 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -41,6 +42,11 @@ Users should be able to:
 - JavaScript
 - Mobile-first workflow
 - [Chart.js](https://www.chartjs.org/)
+
+### Useful resources
+
+- [How do you hide the title of a chart tooltip? - Stack Overflow](https://stackoverflow.com/questions/44632529/how-do-you-hide-the-title-of-a-chart-tooltip)
+- [JavaScript Chart.js - Custom data formatting to display on tooltip - Stack Overflow](https://stackoverflow.com/questions/28568773/javascript-chart-js-custom-data-formatting-to-display-on-tooltip)
 
 ## Author
 
