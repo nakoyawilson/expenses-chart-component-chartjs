@@ -43,7 +43,7 @@ const fetchData = async () => {
             cornerRadius: 5,
             displayColors: false,
             caretSize: 0,
-            padding: 9,
+            padding: { top: 9, right: 8, bottom: 7, left: 9 },
             bodyAlign: "left",
             callbacks: {
               title: () => null,
@@ -70,10 +70,16 @@ const fetchData = async () => {
     };
     new Chart(document.getElementById("chart"), config);
     Chart.Tooltip.positioners.middle = (elements) => {
-      let model = elements[0].element;
+      let x;
+      let y;
+      if (elements[0]) {
+        let model = elements[0].element;
+        x = model.x;
+        y = model.y - 30;
+      }
       return {
-        x: model.x,
-        y: model.y - 30,
+        x,
+        y,
       };
     };
   } catch (err) {
