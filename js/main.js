@@ -70,17 +70,14 @@ const fetchData = async () => {
     };
     new Chart(document.getElementById("chart"), config);
     Chart.Tooltip.positioners.middle = (elements) => {
-      let x;
-      let y;
       if (elements[0]) {
         let model = elements[0].element;
-        x = model.x;
-        y = model.y - 30;
+        return {
+          x: model.x,
+          y: model.y - 30,
+        };
       }
-      return {
-        x,
-        y,
-      };
+      return false;
     };
   } catch (err) {
     console.log(err);
